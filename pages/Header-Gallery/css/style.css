@@ -1,0 +1,908 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding-top: 50px; /* Adjust padding-top to create space */
+}
+
+/* Main Header */
+.header.main-header {
+  position: absolute; /* Fixed position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.header.main-header .nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.header.main-header .nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.header.main-header .nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.header.main-header .nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%) scale(0.5);
+  z-index: 1;
+}
+
+.header.main-header .nav ul li a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.header.main-header .nav ul li a:hover {
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+  transform: scale(1.1); 
+}
+
+/* Static Header 1 */
+
+
+.static-header.static-header-1 {
+  position: relative;
+  top: 100px; /* Adjust position */
+  background-color: rgba(50, 50, 50, 0.8); /* Adjust background color */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 900; /* Lower z-index than main header */
+}
+
+.static-header.static-header-1 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.static-header.static-header-1 .logo img {
+  height: 100px; /* Adjust logo height */
+  width: auto;
+}
+
+.static-header.static-header-1 .nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.static-header.static-header-1 .nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.static-header.static-header-1 .nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+
+/* Static Header 2 */
+
+.header.static-header.static-header-2 {
+  position: relative;
+  top: 150px; /* Adjust position */
+  height: 80px;
+  width: 100%;
+  z-index: 900; /* Lower z-index than main header */
+  background-color: #d03c3c;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+.header.static-header.static-header-2 .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header.static-header.static-header-2 .nav-left {
+  flex: 1; /* Take up remaining space */
+  text-align: left;
+}
+
+.header.static-header.static-header-2 .nav-left ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header.static-header.static-header-2 .nav-left ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.header.static-header.static-header-2 .nav-left ul li a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.header.static-header.static-header-2 .logo {
+  flex: 0 1 auto; /* Allow the logo to size itself based on content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+.header.static-header.static-header-2 .logo img {
+  max-height: 17%;
+  max-width: 17%;
+}
+
+.header.static-header.static-header-2 .search-icon {
+  flex: 1; /* Right-aligned search icon */
+  text-align: right;
+  padding-right: 40px;
+}
+
+.header.static-header.static-header-2 .search-icon img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+}
+
+/* Static Header 3 */
+
+.header.static-header.static-header-3 {
+  position: relative;
+  top: 200px; /* Adjust position */
+  height: 100px;
+  width: 100%;
+  z-index: 900; /* Lower z-index than main header */
+  background-color: #e088ec;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #040404;
+  border-bottom: 10px solid #000000;
+  border-radius: 15px;
+}
+
+
+.header.static-header.static-header-3 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Adjust inner padding */
+}
+
+.header.static-header.static-header-3 .logo {
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+.header.static-header.static-header-3 .logo img {
+  max-height: 60px; /* Adjust size as needed */
+  border-radius: 50%; /* Make the logo circular */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.header.static-header.static-header-3 .logo-text {
+  color: #fff;
+  font-size: 36px; /* Adjust font size */
+  font-family: 'Brush Script MT', cursive; /* Change font family */
+}
+
+.header.static-header.static-header-3 .nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.header.static-header.static-header-3 .nav ul li {
+  margin: 0 15px; /* Space between each link */
+}
+
+.header.static-header.static-header-3 .nav ul li a {
+  color: #fff;
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Adjust font size */
+  padding: 12px 20px; /* Adjust padding for better design */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #9c40d5; /* Background color for each nav link */
+}
+
+.header.static-header.static-header-3 .login-button a {
+  color: #fff;
+  font-size: 16px; /* Adjust font size */
+  text-decoration: none; /* Remove underline */
+  padding: 12px 25px; /* Adjust padding for better design */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #9c40d5; /* Background color for login button */
+}
+
+
+/* Static Header 4 */
+
+.header.static-header.static-header-4 {
+  position: relative;
+  top: 250px; /* Adjust position */
+  height: 150px;
+  width: 100%;
+  z-index: 900; /* Lower z-index than main header */
+  background-color: #956edd;
+  color: #fff;
+  padding: 0% 0;
+  text-align: center;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1), 0 16px 24px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #040404;
+  border-bottom: 4px solid #040404;
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(to right, #7c7adc, #3226b7);
+  border-radius: 50px;
+}
+
+
+.header.static-header.static-header-4 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Adjust padding for inner spacing */
+}
+
+.header.static-header.static-header-4 .logo img {
+  max-height: 150px; /* Adjust size as needed */
+  border-radius: 50%; /* Make the logo circular */
+  width: 150;
+}
+
+.header.static-header.static-header-4 .nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.header.static-header.static-header-4 .nav ul li {
+  margin: 0 15px; /* Space between each link */
+}
+
+.header.static-header.static-header-4 .nav ul li a {
+  color: #fff;
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Adjust font size */
+  padding: 12px 20px; /* Adjust padding for better design */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #cf5e18; /* Background color for each nav link */
+}
+
+.header.static-header.static-header-4 .search-box {
+  display: flex;
+  align-items: center;
+}
+
+.header.static-header.static-header-4 .search-box input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.header.static-header.static-header-4 .search-box img {
+  margin-left: 10px;
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+}
+
+/* Static Header 5 */
+
+.header.static-header.static-header-5 {
+  position: relative;
+  top: 300px; /* Adjust position */
+  height: 120px;
+  width: 100%;
+  z-index: 900; /* Lower z-index than main header */
+  background-color: #7c72a0;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #523b67;
+  border-bottom: 10px solid #3d2b4c;
+  border-radius: 15px;
+}
+
+
+.header.static-header.static-header-5 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Adjust inner padding */
+}
+
+.header.static-header.static-header-5 .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items vertically */
+}
+
+.header.static-header.static-header-5 .logo img {
+  max-height: 40px; /* Adjust size as needed */
+  border-radius: 50%; /* Make the logo circular */
+  margin-bottom: 5px; /* Space between logo and text */
+}
+
+.header.static-header.static-header-5 .logo-text {
+  color: #fff;
+  font-size: 16px; /* Adjust font size */
+  font-family: cursive;
+}
+
+.header.static-header.static-header-5 .icons {
+  display: flex;
+  align-items: center;
+}
+
+.header.static-header.static-header-5 .icons img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  margin: 0 10px; /* Space between icons */
+}
+
+.header.static-header.static-header-5 .search-icon {
+  display: flex;
+  align-items: center;
+}
+
+.header.static-header.static-header-5 .search-icon img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+}
+
+
+
+.animated-header.animated-header-1 {
+  position: relative;
+  top: 400px; /* Adjust to be below static-header.static-header-5 */
+  left: 0;
+  width: 100%;
+  background-color: rgba(50, 50, 50, 0.8);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 800; /* Lower z-index than static header */
+  animation: fadeInDown 0.5s ease;
+}
+
+.animated-header.animated-header-1 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.animated-header.animated-header-1 .logo img {
+  height: 60px; /* Adjust logo height */
+  width: auto;
+}
+
+.animated-header.animated-header-1 .nav {
+  display: flex;
+  justify-content: center;
+}
+
+.animated-header.animated-header-1 .nav ul {
+  list-style-type: none; /* Ensure no bullet points */
+  display: flex;
+  gap: 15px;
+}
+
+.animated-header.animated-header-1 .nav ul li {
+  position: relative;
+}
+
+.animated-header.animated-header-1 .nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  font-weight: bold;
+  position: relative;
+}
+
+.animated-header.animated-header-1 .nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: width 0.3s ease, height 0.3s ease;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.animated-header.animated-header-1 .nav ul li a:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.animated-header.animated-header-1 .nav ul li a:hover {
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.animated-header.animated-header-1 .search-bar {
+  margin-right: 20px;
+}
+
+.animated-header.animated-header-1 .search-bar input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.animated-header.animated-header-1 .search-bar button {
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.animated-header.animated-header-1 .search-bar button:hover {
+  background-color: #555;
+}
+
+@keyframes fadeInDown {
+  0% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.animated-header.animated-header-2 {
+  position: relative;
+  top: 450px; /* Adjust as needed */
+  left: 0;
+  width: 100%;
+  background-color: rgba(206, 40, 40, 0.8);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 800; /* Lower z-index than static header */
+  animation: fadeInDown 0.5s ease;
+}
+
+.animated-header.animated-header-2 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.animated-header.animated-header-2 nav.nav-left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.animated-header.animated-header-2 nav.nav-left ul li {
+  margin-right: 20px;
+}
+
+.animated-header.animated-header-2 nav.nav-left ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.animated-header.animated-header-2 nav.nav-left ul li a:hover {
+  color: #ffd700; /* Change color on hover */
+}
+
+.animated-header.animated-header-2 .logo img {
+  width: 100px; /* Adjust logo size as needed */
+  margin-right: 250px;
+}
+
+.animated-header.animated-header-2 .search-icon img {
+  width: 30px; /* Adjust icon size as needed */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.animated-header.animated-header-2 .search-icon img:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-header.animated-header-3 {
+  position: relative;
+  top: 500px; 
+  height: 100px;
+  width: 100%;
+  z-index: 900; 
+  background-color: #e088ec;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #040404;
+  border-bottom: 10px solid #000000;
+  border-radius: 15px;
+}
+
+.animated-header.animated-header-3 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.animated-header.animated-header-3 .logo {
+  display: flex;
+  align-items: center;
+}
+
+.animated-header.animated-header-3 .logo img {
+  width: 60px; /* Adjust logo size as needed */
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.animated-header.animated-header-3 .logo-text {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.animated-header.animated-header-3 .nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.animated-header.animated-header-3 .nav ul li {
+  margin-right: 20px;
+}
+
+.animated-header.animated-header-3 .nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.animated-header.animated-header-3 .nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1d15b2; /* Highlight color */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.animated-header.animated-header-3 .nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.animated-header.animated-header-3 .login-button a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #206040; /* Adjust button text color */
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.animated-header.animated-header-3 .login-button a:hover {
+  background-color: #206040; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional hover effects */
+.animated-header.animated-header-3 .logo img:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.animated-header.animated-header-3 .logo-text:hover {
+  color: #1c0782; /* Change text color on hover */
+}
+
+/* Header Styles */
+.header.animated-header.animated-header-4 {
+  position: relative;
+  top: 550px; /* Adjust position */
+  height: 150px;
+  width: 100%;
+  z-index: 900; /* Lower z-index than main header */
+  background-color: #956edd;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1), 0 16px 24px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #040404;
+  border-bottom: 4px solid #040404;
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(to right, #7c7adc, #3226b7);
+  border-radius: 50px;
+  animation: fadeInUp 0.5s ease;
+}
+
+/* Logo Styles */
+.header.animated-header.animated-header-4 .logo {
+  float: left;
+  margin-left: 20px; /* Adjust margin */
+}
+
+.header.animated-header.animated-header-4 .logo img {
+  display: block;
+  width: 100px; /* Adjust size */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.header.animated-header.animated-header-4 .logo img:hover {
+  transform: rotate(360deg) scale(1.1); /* Example hover effect */
+}
+
+/* Navigation Styles */
+.header.animated-header.animated-header-4 .nav {
+  display: inline-block;
+  margin: 0 auto; /* Center align */
+}
+
+.header.animated-header.animated-header-4 .nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.header.animated-header.animated-header-4 .nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px; /* Rounded box */
+}
+
+.header.animated-header.animated-header-4 .nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header.animated-header.animated-header-4 .nav ul li:hover a {
+  color: #fff;
+  background-color: #ffa500; /* Example hover background */
+  transform: scale(1.1); /* Example scale effect */
+}
+
+.header.animated-header.animated-header-4 .nav ul li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.header.animated-header.animated-header-4 .nav ul li:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Search Box Styles */
+.header.animated-header.animated-header-4 .search-box {
+  float: right;
+  margin-right: 20px; /* Adjust margin */
+}
+
+.header.animated-header.animated-header-4 .search-box input[type="text"] {
+  padding: 8px;
+  border: none;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.header.animated-header.animated-header-4 .search-box input[type="text"]:focus {
+  width: 200px; /* Example width on focus */
+}
+
+.header.animated-header.animated-header-4 .search-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header.animated-header.animated-header-4 .search-icon img {
+  width: 20px; /* Adjust size */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.header.animated-header.animated-header-4 .search-icon img:hover {
+  transform: rotate(360deg) scale(1.2); /* Example hover effect */
+}
+
+
+.header.animated-header.animated-header-5 {
+  position: relative;
+  top: 600px;
+  height: 120px;
+  width: 100%;
+  z-index: 900;
+  background-color: #7c72a0;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #523b67;
+  border-bottom: 10px solid #3d2b4c;
+  border-radius: 15px;
+}
+
+.header.animated-header.animated-header-5 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header.animated-header.animated-header-5 .logo img {
+  height: 60px; /* Adjust as needed */
+  width: auto;
+  vertical-align: middle;
+}
+
+.header.animated-header.animated-header-5 .logo .logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.header.animated-header.animated-header-5 .icons img {
+  height: 60px; /* Adjusted size */
+  width: auto;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.header.animated-header.animated-header-5 .icons img:nth-child(1):hover {
+  transform: rotate(20deg); /* Example hover effect for icon 1 */
+}
+
+.header.animated-header.animated-header-5 .icons img:nth-child(2):hover {
+  transform: translateY(-10px); /* Example hover effect for icon 2 */
+}
+
+.header.animated-header.animated-header-5 .icons img:nth-child(3):hover {
+  transform: scale(1.2); /* Example hover effect for icon 3 */
+}
+
+.header.animated-header.animated-header-5 .icons img:nth-child(4):hover {
+  filter: brightness(70%); /* Example hover effect for icon 4 */
+}
+
+
+.header.animated-header.animated-header-5 .search-icon img {
+  height: 30px; /* Adjust as needed */
+  width: auto;
+  margin-right: 45px;
+  transition: transform 0.3s ease;
+}
+
+.header.animated-header.animated-header-5 .search-icon img:hover {
+  transform: scale(1.2); /* Example scale effect on hover */
+}
