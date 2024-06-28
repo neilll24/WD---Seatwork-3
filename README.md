@@ -60,16 +60,16 @@
 Description of the project in details.
 
 Guiding Question:
-- What is the project
+- What is the project -
   This project introduces innovative concepts and a comprehensive guide for crafting distinctive headers and footers using HTML and CSS. It offers detailed instructions and creative inspiration, enabling you to enhance the aesthetic and 
   functionality of your web designs. Whether you aim for simplicity or complexity, this resource equips you with the necessary tools and ideas to develop standout web components. 
-- Whats the purpose
+- Whats the purpose -
   The purpose of this project is to provide a resource that combines creative ideas and practical guidance for designing unique and visually appealing headers and footers using HTML and CSS. It aims to enhance the aesthetic appeal and   
   functionality of web pages by offering detailed instructions and inspiration for both simple and complex web design elements.
-- What are key components
+- What are key components -
   The key components of this project are the static and animated headers and footers. Static headers and footers include basic layouts with logos, navigation links, search boxes, and specific styling like outlines and shadows. Animated 
   headers and footers incorporate dynamic elements and effects to create visually engaging and interactive web components.
-- What technology used and how it is used
+- What technology used and how it is used -
   This project uses HTML to structure the content of headers and footers, defining elements like headings, navigation links, and logos. CSS is employed to style these elements, controlling their appearance, layout, and responsiveness to 
   ensure they are visually appealing and functional across various devices.
 ### Key Components
