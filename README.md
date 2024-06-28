@@ -105,7 +105,7 @@ WD-ProjectName
 |   |   └─ style.css
 |   └─ img
 |      └─ landingbg.gif
-|
+|      └─ readmlogo.png
 └─ pages
 |  └─ footer-gallery
 |  |     └─ assets
